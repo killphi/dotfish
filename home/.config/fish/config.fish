@@ -4,16 +4,19 @@ source /etc/fish/config.fish
 # source aliases
 source ~/.config/fish/aliases.fish
 
-# set path
-if test -z (echo $PATH | grep $HOME/bin)
+# set tool path
+set -g __killphi_tool_path ~/.config/fish/tools
+
+# modify path
+if not contains $HOME/bin $PATH
   set -x PATH ~/bin $PATH
 end
 
-if test -z (echo $PATH | grep $HOME/.local/bin)
+if not contains $HOME/.local/bin $PATH
   set -x PATH ~/.local/bin $PATH
 end
 
-if test -z (echo $PATH | grep $HOME/node_moduls/.bin)
+if not contains $HOME/node_modules/.bin $PATH
   set -x PATH $PATH ~/node_modules/.bin
 end
 
