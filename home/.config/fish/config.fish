@@ -24,10 +24,6 @@ end
 set -x VISUAL vim
 set -x EDITOR $VISUAL
 
-# fix user & host color
-set -g fish_color_user green
-set -g fish_color_host cyan
-
 # dircolors
 set -x LS_COLORS (dircolors .dir_colors | cut -d\n -f1 | sed -e 's/.*\'\(.*\)\'.*/\1/')
 
