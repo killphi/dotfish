@@ -1,5 +1,5 @@
 function cw
-  for i in seq 2000
+  for i in (seq 2000)
     echo
   end
 
