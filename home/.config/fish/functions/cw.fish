@@ -1,4 +1,7 @@
 function cw
+  # this is to reset rvm environment
+  rvm use default
+
   for i in (seq 2000)
     echo
   end
