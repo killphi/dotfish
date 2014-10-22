@@ -17,7 +17,7 @@ if not contains $HOME/.local/bin $PATH
 end
 
 if not contains $HOME/node_modules/.bin $PATH
-  set -x PATH $PATH ~/node_modules/.bin
+  set -x PATH ~/node_modules/.bin $PATH
 end
 
 # VIm <3
