@@ -1,4 +1,7 @@
 function cw
+  # go to home dir
+  cd
+
   # this is to reset rvm environment
   rvm use default
 
