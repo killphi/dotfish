@@ -25,7 +25,7 @@ set -x VISUAL vim
 set -x EDITOR $VISUAL
 
 # dircolors
-set -x LS_COLORS (dircolors .dir_colors | cut -d\n -f1 | sed -e 's/.*\'\(.*\)\'.*/\1/')
+set -x LS_COLORS (dircolors ~/.dir_colors | cut -d\n -f1 | sed -e 's/.*\'\(.*\)\'.*/\1/')
 
 # call rvm once (silently), to set up env
 rvm ^&1 >/dev/null
