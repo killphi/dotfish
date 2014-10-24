@@ -4,8 +4,9 @@ source /etc/fish/config.fish
 # source aliases
 source ~/.config/fish/aliases.fish
 
-# set tool path
+# set tool and ext path
 set -g __killphi_tool_path ~/.config/fish/tools
+set -g __killphi_ext_path ~/.config/fish/ext
 
 # modify path
 if not contains $HOME/node_modules/.bin $PATH
