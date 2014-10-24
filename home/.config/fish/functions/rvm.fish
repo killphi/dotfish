@@ -16,9 +16,7 @@ function __handle_rvmrc_stuff --on-variable PWD
     set -l cwd $PWD
     while true
       if contains $cwd "" $HOME "/"
-        if test "$rvm_project_rvmrc_default" = 1
-          rvm default 1>/dev/null 2>&1
-        end
+        rvm default 1>/dev/null 2>&1
         break
       else
         if test -e .rvmrc -o -e .ruby-version -o -e .ruby-gemset
