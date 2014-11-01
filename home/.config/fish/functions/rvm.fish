@@ -19,7 +19,7 @@ function __handle_rvmrc_stuff --on-variable PWD
         rvm default 1>/dev/null 2>&1
         break
       else
-        if test -e .rvmrc -o -e .ruby-version -o -e .ruby-gemset
+        if test -e $cwd/.rvmrc -o -e $cwd/.ruby-version -o -e $cwd/.ruby-gemset
           eval "rvm reload" > /dev/null
           eval "rvm rvmrc load" >/dev/null
           break
