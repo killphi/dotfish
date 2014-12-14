@@ -8,7 +8,7 @@ source ~/.config/fish/aliases.fish
 set -g __killphi_tool_path ~/.config/fish/tools
 set -g __killphi_ext_path ~/.config/fish/ext
 
-# modify path
+# modify PATH
 if not contains $HOME/node_modules/.bin $PATH
   set -x PATH ~/node_modules/.bin $PATH
 end
@@ -19,6 +19,19 @@ end
 
 if not contains $HOME/.local/bin $PATH
   set -x PATH ~/.local/bin $PATH
+end
+
+# modify LD_LIBRARY_PATH
+if not contains /usr/lib $LD_LIBRARY_PATH
+  set -x LD_LIBRARY_PATH /usr/lib $LD_LIBRARY_PATH
+end
+
+if not contains /usr/lib64 $LD_LIBRARY_PATH
+  set -x LD_LIBRARY_PATH /usr/lib64 $LD_LIBRARY_PATH
+end
+
+if not contains /usr/local/lib $LD_LIBRARY_PATH
+  set -x LD_LIBRARY_PATH /usr/local/lib $LD_LIBRARY_PATH
 end
 
 # VIm <3
