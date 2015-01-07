@@ -9,6 +9,8 @@ set -g __killphi_tool_path ~/.config/fish/tools
 set -g __killphi_ext_path ~/.config/fish/ext
 
 # modify PATH
+set -xg PATH /usr/local/bin /usr/bin
+
 if not contains $HOME/node_modules/.bin $PATH
   set -x PATH ~/node_modules/.bin $PATH
 end
