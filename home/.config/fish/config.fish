@@ -8,6 +8,10 @@ source ~/.config/fish/aliases.fish
 set -g __killphi_tool_path ~/.config/fish/tools
 set -g __killphi_ext_path ~/.config/fish/ext
 
+# clean language foo
+set -e LANGUAGE
+
+
 # modify PATH
 set -xg PATH /usr/local/bin /usr/bin /bin
 
