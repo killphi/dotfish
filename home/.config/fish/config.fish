@@ -1,6 +1,9 @@
 # source global config
 source /etc/fish/config.fish
 
+# we know we get unicode
+unicode_start
+
 # source aliases
 source ~/.config/fish/aliases.fish
 
@@ -43,9 +46,11 @@ end
 # VIm <3
 set -x VISUAL vim
 set -x EDITOR $VISUAL
+fish_vi_mode
+fish_vi_key_bindings
 
 # dircolors
-set -x LS_COLORS (dircolors ~/.dir_colors | head -1 | sed -e 's/.*\'\(.*\)\'.*/\1/')
+set -x LS_COLORS (dircolors ~/Versioning/.homesick-dep/dircolors-solarized/dircolors.256dark | head -1 | sed -e 's/.*\'\(.*\)\'.*/\1/')
 
 # call rvm (silently), to set up env
 rvm reload ^&1 >/dev/null
