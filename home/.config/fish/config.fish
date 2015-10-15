@@ -52,6 +52,9 @@ fish_vi_key_bindings
 # dircolors
 set -x LS_COLORS (dircolors ~/.dir_colors | head -1 | sed -e 's/.*\'\(.*\)\'.*/\1/')
 
+# Rust env
+set -x RUST_SRC_PATH "/home/killphi/Versioning/Rust/rust/src"
+
 # call rvm (silently), to set up env
 rvm reload ^&1 >/dev/null
 rvm rvmrc load ^&1 >/dev/null
