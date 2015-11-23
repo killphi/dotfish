@@ -3,6 +3,6 @@ function cw
     echo
   end
 
-  tmux clear-history
+  tmux clear-history -t:
   clear
 end
