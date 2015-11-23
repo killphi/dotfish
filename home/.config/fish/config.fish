@@ -43,13 +43,6 @@ if not contains /usr/local/lib $LD_LIBRARY_PATH
   set -x LD_LIBRARY_PATH /usr/local/lib $LD_LIBRARY_PATH
 end
 
-# VIm <3
-set -x VISUAL vim
-set -x EDITOR $VISUAL
-fish_vi_mode
-fish_vi_key_bindings
-fish_user_vi_key_bindings
-
 # dircolors
 set -x LS_COLORS (dircolors ~/.dir_colors | head -1 | sed -e 's/.*\'\(.*\)\'.*/\1/')
 
@@ -59,3 +52,13 @@ set -x RUST_SRC_PATH "/home/killphi/Versioning/Rust/rust/src"
 # call rvm (silently), to set up env
 rvm reload ^&1 >/dev/null
 rvm rvmrc load ^&1 >/dev/null
+
+# VIm <3
+set -x VISUAL vim
+set -x EDITOR $VISUAL
+fish_vi_mode
+function user_keybind_hack
+  fish_vi_key_bindings
+  fish_user_key_bindings
+end
+set -g fish_key_bindings user_keybind_hack
