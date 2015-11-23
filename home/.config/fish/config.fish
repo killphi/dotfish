@@ -48,6 +48,7 @@ set -x VISUAL vim
 set -x EDITOR $VISUAL
 fish_vi_mode
 fish_vi_key_bindings
+fish_user_vi_key_bindings
 
 # dircolors
 set -x LS_COLORS (dircolors ~/.dir_colors | head -1 | sed -e 's/.*\'\(.*\)\'.*/\1/')
