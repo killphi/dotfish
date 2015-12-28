@@ -2,9 +2,7 @@
 set -l print 0
 set -l pwd $PWD
 
-if set -q __killphi_unclean_git_fetch
-  git fetch
-end
+git remote update >/dev/null
 
 set -l file_status (git status --porcelain)
 set -l remote_status (__git_remote_status)
