@@ -1,4 +1,3 @@
-#!/usr/bin/env fish
 function term
   # wait if started in parallel
   sleep 0.1
