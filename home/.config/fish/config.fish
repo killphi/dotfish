@@ -1,9 +1,6 @@
 # source global config
 source /etc/fish/config.fish
 
-# we know we get unicode
-unicode_start
-
 # source aliases
 source ~/.config/fish/aliases.fish
 
@@ -55,12 +52,8 @@ rvm reload ^&1 >/dev/null
 rvm rvmrc load ^&1 >/dev/null
 
 # VIm <3
-fish_vi_mode
-function user_keybind_hack
-  fish_vi_key_bindings
-  fish_user_key_bindings
-end
-set -g fish_key_bindings user_keybind_hack
+fish_vi_key_bindings
+fish_user_key_bindings
 set -x VISUAL vim
 set -x EDITOR $VISUAL
 
